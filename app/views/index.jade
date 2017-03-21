@@ -3,7 +3,12 @@ extends layout
 block content
   h1= title
   p Welcome Use #{title}
-
-
+  if articles
+    each article in articles
+      div.article
+        h3.article-title
+          =article.title
+        a.article-url(href="/#{article.url}") test url: #{article.url}
+        p.article-text #{article.text}
 block scripts
   script(src='/js/index.js')

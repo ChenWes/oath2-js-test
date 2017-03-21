@@ -9,7 +9,7 @@ var config = {
       name: 'oath2-js-test'
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/oath2-js-test-development'
+    db: 'mongodb://localhost/oath2-js'
   },
 
   test: {

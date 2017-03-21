@@ -9,6 +9,7 @@ module.exports = function (app) {
 
 router.get('/', function (req, res, next) {
   Article.find(function (err, articles) {
+    // return res.json(articles);
     if (err) return next(err);
     res.render('index', {
       title: 'Esquel LPD OAuth2',
