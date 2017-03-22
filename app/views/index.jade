@@ -3,12 +3,19 @@ extends layout
 block content
   h1= title
   p Welcome Use #{title}
-  if articles
-    each article in articles
-      div.article
-        h3.article-title
-          =article.title
-        a.article-url(href="/#{article.url}") test url: #{article.url}
-        p.article-text #{article.text}
+  //- if articles
+  //-   each article in articles
+  //-     div.article
+  //-       h3.article-title
+  //-         =article.title
+  //-       a.article-url(href="/#{article.url}") test url: #{article.url}
+  //-       p.article-text #{article.text}
+  button.btn.btn-primary#login Test OAuth2
+  br
+  br
+  br
+  pre#out
 block scripts
+  script(src='/components/oidc-client/dist/oidc-client.js')
+  script(src='/js/log.js')
   script(src='/js/index.js')
